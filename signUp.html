@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="script.js"></script>
+
+    <div class="heart" style="left: 10%; animation-duration: 6s;"></div>
+    <div class="heart" style="left: 30%; animation-duration: 5s;"></div>
+    <div class="flower" style="left: 50%; animation-duration: 7s;"></div>
+    <div class="flower" style="left: 70%; animation-duration: 6.5s;"></div>
+    <div class="heart" style="left: 90%; animation-duration: 8s;"></div>
+
+    <div class="container">
+    
+        <h2>Sign Up</h2>
+    
+        <form action="singIn.html">
+    
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" required>
+            
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" required>
+            
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="policy">
+                <input type="checkbox" id="policy" required> I agree to the Privacy Policy
+            </label>
+            
+            <button type="submit">Sign Up</button>
+
+        </form>
+            
+        <p>Already have an account <a href="singIn.html">Sign In</a></p>
+
+    </div>
+
+</body>
+</html>

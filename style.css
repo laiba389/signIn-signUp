@@ -1,0 +1,130 @@
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #c7b8f5, #e4c1f9);
+    animation: backgroundMove 6s infinite alternate ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 45px 5px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    width: 320px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+    color: #5d3fd3;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #5d3fd3;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid rgba(93, 63, 211, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    color: #5d3fd3;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #5d3fd3;
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+a {
+    color: #5d3fd3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #b19cd9;
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #907ad6, #b19cd9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #b19cd9, #907ad6);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(177, 156, 217, 0.4);
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    clip-path: polygon(
+        50% 0%, 100% 30%, 80% 100%, 50% 80%, 20% 100%, 0% 30%
+    );
+    background: #ff4d6d;
+    opacity: 0.8;
+    animation: floatUp 6s infinite linear;
+}
+
+.flower {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+    background: #ff94c2;
+    opacity: 0.8;
+    animation: floatUp 8s infinite linear;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0.6; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes backgroundMove {
+    from { background: linear-gradient(135deg, #c7b8f5, #e4c1f9); }
+    to { background: linear-gradient(135deg, #b19cd9, #c7b8f5); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
